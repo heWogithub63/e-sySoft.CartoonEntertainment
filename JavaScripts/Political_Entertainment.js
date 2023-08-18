@@ -111,6 +111,8 @@ function createImg(id,path,thema,height,width) {
          for(var i=0;i<textBtn.length;i++)
              textBtn[i].style.color = 'black';
          textBtn[this.id].style.color = 'blue';
+         for( var i=0;i<steerBtn.length;i++)
+             steerBtn[i].style.color = 'white';
          steerBtn[0].style.color = 'yellow';
          
          selected = './VideoClips/'+this.name+'/'+this.src.substring(this.src.lastIndexOf("/")+1, this.src.lastIndexOf(".png"))+'.mp4';
@@ -134,10 +136,18 @@ function createSteerButton(id,text) {
         steerBtn[id].id = id;
         steerBtn[id].onclick = function(event) {
             if(selected != '') {
+               for( var i=0;i<steerBtn.length;i++)
+                    steerBtn[i].style.color = 'white';
+               this.style.color = 'yellow';
+               
                if(this.id == 1) {
-                  steerBtn[1].style.color = 'yellow';
-               } else if(this.id == 0)
-                  steerBtn[1].style.color = 'white';
+                  var select = './VideoClips/break.mp4';
+
+                      console.log(select);
+                      document.getElementById('video1').src = select;
+               } else if(this.id == 0) {
+                  document.getElementById('video1').src = selected;
+               }
             }
         }
     return steerBtn[id];
