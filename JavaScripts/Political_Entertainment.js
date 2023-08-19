@@ -6,7 +6,7 @@
    var n = 0;
    var selected = "";
   
-   var politicalImg = "Apollo_Optik, AerzteInterview, eine_neue_Zeit, COVID-19_German-solution, da_sprach_Gott, die_Etablierten, HairDressing, UmzugsUnternehmen, UnternehmensBeratung, "+
+   var politicalImg = "Apollo_Optik, AerzteInterview, eine_neue_Zeit, da_sprach_Gott, die_Etablierten, HairDressing, UmzugsUnternehmen, UnternehmensBeratung, "+
                        "Merkel-and-Trump, Trump-Queen, Trump-Amerika_first"; 
    var splitedImg = politicalImg.split(", ");  
    var werbungImg = "Apollo_Optik, DentaBlink, DentalKlinik, Die_Milch_machts, Fremdenverkehrsamt_Tirol, Frosta, HairDressing, LieferHeld, Mon_Cheri, PartnerShip, Werkzeuge"; 
