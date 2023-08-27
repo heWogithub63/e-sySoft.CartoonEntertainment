@@ -141,8 +141,8 @@ function createSteerButton(id,text) {
                this.style.color = '#7cf80a';
                
                if(this.id == 1) {
-                  var select = './VideoClips/download.webm';
-                      document.getElementById('video1').src = select;
+                  /*var select = './VideoClips/download.webm';
+                      document.getElementById('video1').src = select;*/
   
                   /*window.location.href = 'https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
                                    selected.substring(0, selected.lastIndexOf("/")).substring(selected.substring(0, selected.lastIndexOf("/")).lastIndexOf("/")+1) +
