@@ -144,12 +144,12 @@ function createSteerButton(id,text) {
                   var select = './VideoClips/download.webm';
                       document.getElementById('video1').src = select;
   
-                  /*window.location.href = 'https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
+                  window.location.href = 'https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
                                    selected.substring(0, selected.lastIndexOf("/")).substring(selected.substring(0, selected.lastIndexOf("/")).lastIndexOf("/")+1) +
-                                   selected.substring(selected.lastIndexOf("/"));*/
-                  download ('https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
+                                   selected.substring(selected.lastIndexOf("/"));
+                  /*download ('https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
                                    selected.substring(0, selected.lastIndexOf("/")).substring(selected.substring(0, selected.lastIndexOf("/")).lastIndexOf("/")+1) +
-                                   selected.substring(selected.lastIndexOf("/")), selected.substring(selected.lastIndexOf("/")));
+                                   selected.substring(selected.lastIndexOf("/")), selected.substring(selected.lastIndexOf("/")));*/
                   
                } else if(this.id == 0) {
                   document.getElementById('video1').src = selected;
