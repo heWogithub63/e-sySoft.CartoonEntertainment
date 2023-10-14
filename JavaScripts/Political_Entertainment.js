@@ -43,13 +43,15 @@ function createSurface (kindOf) {
        
        newRow[r] = document.createElement('tr');
        
-        if(r==(i)) {
+        if(r > 1 && r<=(i)) {
            a = splitedImg.length - (6*(r-1));
-           if(a>0)
+           if(a>0) {
               a = splitedImg.length -a;
-           else
+              b = r*6;
+           } else
               a=0;
-           b = splitedImg.length;
+           if(b > splitedImg.length)
+              b = splitedImg.length;
         } else {
            a = 0;
            b = 6;
