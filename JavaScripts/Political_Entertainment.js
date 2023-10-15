@@ -9,7 +9,8 @@
    var politicalImg = "vonAnfang_an_eine_Lüge, AerzteInterview, eine_neue_Zeit, da_sprach_Gott, die_Etablierten, wir_können_noch_ganz_anders, UmzugsUnternehmen, UnternehmensBeratung, "+
                        "Merkel-and-Trump, Trump-Queen, Trump-Amerika_first, Covid-19_German-solution, Lauterbach-Impfung"; 
    var splitedImg = politicalImg.split(", ");  
-   var werbungImg = "Apollo_Optik, DentaBlink, DentalKlinik, Die_Milch_machts, Fremdenverkehrsamt_Tirol, Frosta, HairDressing, LieferHeld, Mon_Cheri, PartnerShip, Werkzeuge, BlueJean"; 
+   var werbungImg = "Apollo_Optik, DentaBlink, DentalKlinik, Die_Milch_machts, Fremdenverkehrsamt_Tirol, Frosta, HairDressing, LieferHeld, Mon_Cheri, PartnerShip, Werkzeuge, BlueJean, "+
+                     "Land_Idylle";  
    var splitedWerbung = werbungImg.split(", ");
    var thema = "PolitischMotiviert, " +
                "Werbung";
