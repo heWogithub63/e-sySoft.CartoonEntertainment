@@ -10,7 +10,7 @@
                        "Merkel-and-Trump, Trump-Queen, Trump-Amerika_first, Covid-19_German-solution, Lauterbach-Impfung, AfD_Weigl, KoalitionsVerhandlungen, armesDeutschland, insanity_war"; 
    var splitedImg = politicalImg.split(", ");  
    var werbungImg = "Apollo_Optik, DentaBlink, DentalKlinik, Die_Milch_machts, Fremdenverkehrsamt_Tirol, Frosta, HairDressing, LieferHeld, Mon_Cheri, PartnerShip, Werkzeuge, BlueJean, "+
-                     "Land_Idylle, lose-yourself";  
+                     "Land_Idylle, lose-yourself, everywhere-we-go";  
    var splitedWerbung = werbungImg.split(", ");
    var thema = "PolitischMotiviert, " +
                "Werbung";
