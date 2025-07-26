@@ -120,6 +120,8 @@ function createImg(id,path,thema,height,width) {
          
          selected = './VideoClips/'+this.name+'/'+this.src.substring(this.src.lastIndexOf("/")+1, this.src.lastIndexOf(".png"))+'.webm';
          document.getElementById('video1').src = selected;
+
+	 scrollTo(0, document. body. scrollHeight);
     };
     
   return oImg;
