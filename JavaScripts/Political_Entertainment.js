@@ -8,7 +8,7 @@
   
    var politicalImg = "vonAnfang_an_eine_Lüge, AerzteInterview, eine_neue_Zeit, da_sprach_Gott, die_Etablierten, wir_können_noch_ganz_anders, UmzugsUnternehmen, UnternehmensBeratung, "+
                        "Merkel-and-Trump, Trump-Queen, Trump-Amerika_first, Covid-19_German-solution, Lauterbach-Impfung, AfD_Weigl, "+ 
-                        "KoalitionsVerhandlungen, armesDeutschland, insanity_war, freePalestine"; 
+                        "KoalitionsVerhandlungen, armesDeutschland, insanity_war, freePalestine, politisches-Versagen"; 
    var splitedImg = politicalImg.split(", ");  
    var werbungImg = "Apollo_Optik, DentaBlink, DentalKlinik, Die_Milch_machts, Fremdenverkehrsamt_Tirol, Frosta, HairDressing, LieferHeld, Mon_Cheri, PartnerShip, Werkzeuge, BlueJean, "+
                      "Land_Idylle, lose-yourself, everywhere-we-go";  
@@ -38,6 +38,8 @@ function createSurface (kindOf) {
    if(dif <= 1) i=1;
    else if(dif <= 2) i=2;
    else if(dif <= 3) i=3;
+   else if(dif <= 4) i=4;
+   else if(dif <= 5) i=5;
    var a = 0;
    var b = 6;
    
@@ -112,6 +114,7 @@ function createImg(id,path,thema,height,width) {
     oImg.setAttribute('height', height);
     oImg.setAttribute('width', width);
     oImg.onclick = function(event) {
+        
          for(var i=0;i<textBtn.length;i++)
              textBtn[i].style.color = 'black';
          textBtn[this.id].style.color = 'blue';
