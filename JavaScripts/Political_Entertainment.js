@@ -121,13 +121,36 @@ function createImg(id,path,thema,height,width) {
          for( var i=0;i<steerBtn.length;i++)
              steerBtn[i].style.color = 'white';
          steerBtn[0].style.color = '#7cf80a';
+                     
+         
+         var videodiv = document.getElementById('videodiv');
+            while (videodiv.hasChildNodes()) {
+                   videodiv.removeChild(videodiv.lastChild);
+            }
          
          selected = './VideoClips/'+this.name+'/'+this.src.substring(this.src.lastIndexOf("/")+1, this.src.lastIndexOf(".png"))+'.webm';
-         document.getElementById('video1').src = selected;
+         var videoDisplay = document.createElement('video')
+             videoDisplay.src = selected;
+             videoDisplay.autoplay = true;
+             videoDisplay.setAttribute("controls","controls");
+             
+             videoDisplay.style.width = '720px';
+             videoDisplay.style.height = '480px';
+             
+            
+             videodiv.appendChild(videoDisplay);
+             
 
-	 scrollTo(0, document. body. scrollHeight);
+	 scrollTo(0, (document. body. scrollHeight) +480);
     };
+    oImg.addEventListener('mouseover', function(event) {
+        
+        textBtn[this.id].style.color = 'blue'; 
+    });
+    oImg.addEventListener('mouseout', function(event) {
     
+         textBtn[this.id].style.color = 'black';
+    });
   return oImg;
 }
 
@@ -143,28 +166,22 @@ function createSteerButton(id,text) {
         steerBtn[id] = document.createElement('steerButton');
         steerBtn[id].innerText = text;
         steerBtn[id].id = id;
-        steerBtn[id].onclick = function(event) {
-            if(selected != '') {
-               for( var i=0;i<steerBtn.length;i++)
-                    steerBtn[i].style.color = 'white';
-               this.style.color = '#7cf80a';
-               
-               if(this.id == 1) {
-                  /*var select = './VideoClips/download.webm';
-                      document.getElementById('video1').src = select;*/
-  
-                  /*window.location.href = 'https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
-                                   selected.substring(0, selected.lastIndexOf("/")).substring(selected.substring(0, selected.lastIndexOf("/")).lastIndexOf("/")+1) +
-                                   selected.substring(selected.lastIndexOf("/"));*/
-                  download ('https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
-                                   selected.substring(0, selected.lastIndexOf("/")).substring(selected.substring(0, selected.lastIndexOf("/")).lastIndexOf("/")+1) +
+        steerBtn[id].style.color = 'white';
+        if(id == 0) 
+           steerBtn[id].style.color = '#7cf80a';
+        else    
+          steerBtn[id].onclick = function(event) {
+        
+              this.style.color = '#7cf80a';
+                  
+              download ('https://github.com/heWogithub63/e-sySoft.CartoonEntertainment/tree/main/VideoClips/'+
+                                   selected.substring(0, selected.lastIndexOf("/")).substring(selected.substring(0, 
+                                   selected.lastIndexOf("/")).lastIndexOf("/")+1) +
                                    selected.substring(selected.lastIndexOf("/")), selected.substring(selected.lastIndexOf("/")));
                   
-               } else if(this.id == 0) {
-                  document.getElementById('video1').src = selected;
-               }
-            }
-        }
+                
+          
+          }
     return steerBtn[id];
 }
 
@@ -187,4 +204,11 @@ function download (href, title) {
      a.href = href;
      a.download = title;
      a.click();
+}
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY
+  };
 }
